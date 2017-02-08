@@ -78,7 +78,7 @@
 			</div>
 		</nav>
 
-		<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(images/banner/Executives.jpg)" data-stellar-background-ratio="1">
+		<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url('images/banner/Executives.jpg')" data-stellar-background-ratio="1">
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="row">
@@ -105,257 +105,22 @@
 
 
 				<div class="row">
-					<% for (executive of executives)  { %>
+					<% for(executive of executives)  { %>
 						<div class="col-md-8 col-md-offset-2 animate-box" data-animate-effect="fadeIn">
-							<%= executive %>
 							<h1> <%= executive.content.role %> </h1>
 							<h3> <%= executive.content.name %> </h3>
-							<strong class="role"> {{ executive.role }} </strong>
-							<p class="text-left">  {{ executive.info> }} </p>
+							<p class="text-left">  <%= executive.content.text %> </p>
 								<ul class="fh5co-social-icons">
-									<li> LINKED TO AND IMG TAG DON'T SEEM TO WORK FOR ME</li>
-									<li>  link_to("Facebook", executive.facebook) %>  <i class="icon-facebook"></i>< </li>
-									<li>  link_to("Twitter",  executive.twitter) %> <i class="icon-twitter"> </i> </li>
-									<li>  link_to("LinkedIn",  executive.linkedin)  %>  <i class="icon-linkedin"> </i> </li>
+									<li> <a href="<%= executive.facebook %>">Facebook <i class="icon-facebook"></i></a></li>
+									<li> <a href="<%= executive.twitter %>">Twitter <i class="icon-twitter"></i></a></li>
+									<li> <a href="<%= executive.linkedin %>">LinkedIn <i class="icon-linkedin"></i></a></li>
 								</ul>
 						</div>
-				</div>
 						<% } %>
+				</div>
 						<!-- ======================== -->
-						<div class="col-md-8 col-md-offset-2 animate-box" data-animate-effect="fadeIn">
-							<div class="fh5co-staff">
-								<img src="images/executives/elliot.jpg" alt="Free HTML5 Templates by gettemplates.co">
-								<h3><%= executive.content.name %></h3>
-								<strong class="role"><%= executive.role %></strong>
-								<p class="text-left"><%= executive.info> %></p>
-								<ul class="fh5co-social-icons">
-									<li>  link_to("Facebook", executive.facebook) %>  <i class="icon-facebook"></i>< </li>
-									<li>  link_to("Twitter",  executive.twitter) %> <i class="icon-twitter"> </i> </li>
-									<li>  link_to("LinkedIn",  executive.linkedin)  %>  <i class="icon-linkedin"> </i> </li>
-								</ul>
-							</div>
-						</div>
-						<!-- <div class="col-md-8 col-md-offset-2 animate-box" data-animate-effect="fadeIn">
-							<div class="fh5co-staff">
-								<img src="images/executives/elliot.jpg" alt="Free HTML5 Templates by gettemplates.co">
-								<h3>ELLIOT JUSTICE</h3>
-								<strong class="role">President</strong>
-								<p class="text-left">Elliot Graduated Magna Cum Laude from the University of Oregon in 2011 with a degree in Political Science, where he developed his passion for social action and community service. In his role as Founder and President of the YPC, he will work to foster a community of emerging leaders who share a commitment to advancing the mission of VMC. For the last three years, Elliot has worked at Cushman & Wakefield as a tenant representative advising technology companies on their real estate strategies.</p>
-								<ul class="fh5co-social-icons">
-									<li><a href="#"><i class="icon-facebook"></i></a></li>
-									<li><a href="#"><i class="icon-twitter"></i></a></li>
-									<li><a href="#"><i class="icon-linkedin"></i></a></li>
-								</ul>
-							</div>
-						</div> -->
-						<div class="col-md-8 col-md-offset-2 animate-box" data-animate-effect="fadeIn">
-							<div class="fh5co-staff">
-								<img src="images/executives/elliot.jpg" alt="Free HTML5 Templates by gettemplates.co">
-								<h3><%= executive.content.name %></h3>
-								<strong class="role"><%= executive.role %></strong>
-								<p class="text-left"><%= executive.info> %></p>
-								<ul class="fh5co-social-icons">
-									<li>  link_to("Facebook", executive.facebook) %>  <i class="icon-facebook"></i>< </li>
-									<li>  link_to("Twitter",  executive.twitter) %> <i class="icon-twitter"> </i> </li>
-									<li>  link_to("LinkedIn",  executive.linkedin)  %>  <i class="icon-linkedin"> </i> </li>
-								</ul>
-							</div>
-						</div>
-						<!-- <div class="col-md-8 col-md-offset-2 animate-box" data-animate-effect="fadeIn">
-							<div class="fh5co-staff">
-								<img src="images/executives/ben.jpg" alt="ben">
-								<h3>BENJAMIN TIM PENCE</h3>
-								<strong class="role">Vice President</strong>
-								<p class="text-left">Benjamin Tim Pence completed his residency in physical medicine and rehabilitation at Stanford university school of medicine, and completed his sub specialization in spinal cord injury medicine at Baylor university. He is an assistant clinical professor in the department of neurosurgery at Stanford school of medicine. Prior to moving to Santa Clara Valley Medical Center, he worked for the Palo Alto VA as one of their spinal cord injury physicians. Currently he works as one of the spinal cord injury physicians at Santa Clara Valley medical center and a California state athletic commission physician for professional boxing and mixed martial arts.</p>
-								<ul class="fh5co-social-icons">
-									<li><a href="#"><i class="icon-facebook"></i></a></li>
-									<li><a href="#"><i class="icon-twitter"></i></a></li>
-									<li><a href="#"><i class="icon-linkedin"></i></a></li>
-								</ul>
-							</div>
-						</div> -->
-						<div class="col-md-8 col-md-offset-2 animate-box" data-animate-effect="fadeIn">
-							<div class="fh5co-staff">
-								<img src="images/executives/elliot.jpg" alt="Free HTML5 Templates by gettemplates.co">
-								<h3><%= executive.content.name %></h3>
-								<strong class="role"><%= executive.role %></strong>
-								<p class="text-left"><%= executive.info> %></p>
-								<ul class="fh5co-social-icons">
-									<li>  link_to("Facebook", executive.facebook) %>  <i class="icon-facebook"></i>< </li>
-									<li>  link_to("Twitter",  executive.twitter) %> <i class="icon-twitter"> </i> </li>
-									<li>  link_to("LinkedIn",  executive.linkedin)  %>  <i class="icon-linkedin"> </i> </li>
-								</ul>
-							</div>
-						</div>
-					<!-- <div class="col-md-8 col-md-offset-2 animate-box" data-animate-effect="fadeIn">
-						<div class="fh5co-staff">
-							<img src="images/executives/jay.png" alt="Free HTML5 Templates by gettemplates.co">
-							<h3>JAY PATEL</h3>
-							<strong class="role">Corporate Development &amp; Partnership Co-Chair</strong>
-							<p class="text-left">Jay Patel  teaches beginners how to code at CodingDojo and consults for companies in the Bay Area on tech-related issues. At CodingDojo, Jay teaches and practices web development and specializes in Javascript, Python, and iOS. Having grown up  in Silicon Valley Jay has been exposed to development for as long as he can remember. Jay started developing as a kid building simple yet addictive games. Attending college at the University of California, Irvine, Jay majored in business with an emphasis in finance and worked briefly in investment management before returning to Silicon Valley to practice web development.</p>
-							<ul class="fh5co-social-icons">
-								<li><a href="#"><i class="icon-facebook"></i></a></li>
-								<li><a href="#"><i class="icon-twitter"></i></a></li>
-								<li><a href="#"><i class="icon-linkedin"></i></a></li>
-							</ul>
-						</div>
-					</div> -->
-					<div class="col-md-8 col-md-offset-2 animate-box" data-animate-effect="fadeIn">
-						<div class="fh5co-staff">
-							<img src="images/executives/elliot.jpg" alt="Free HTML5 Templates by gettemplates.co">
-							<h3><%= executive.content.name %></h3>
-							<strong class="role"><%= executive.role %></strong>
-							<p class="text-left"><%= executive.info> %></p>
-							<ul class="fh5co-social-icons">
-								<li>  link_to("Facebook", executive.facebook) %>  <i class="icon-facebook"></i>< </li>
-								<li>  link_to("Twitter",  executive.twitter) %> <i class="icon-twitter"> </i> </li>
-								<li>  link_to("LinkedIn",  executive.linkedin)  %>  <i class="icon-linkedin"> </i> </li>
-							</ul>
-						</div>
-					</div>
-					<!-- <div class="col-md-8 col-md-offset-2 animate-box" data-animate-effect="fadeIn">
-						<div class="fh5co-staff">
-							<img src="images/executives/paul.jpg" alt="Free HTML5 Templates by gettemplates.co">
-							<h3>PAUL SCHINDLER</h3>
-							<strong class="role">Corporate Development &amp; Partnership Co-Chair</strong>
-							<p class="text-left">Paul graduated from University of California, Davis in 2008 with a degree in Economics and Sacramento State University in 2011 with an MS in Ed Counseling. Paul has experience working with political lobbying organizations in Sacramento as well as in various roles with Educational and Medical non-profits since 2008. In his role as Bay Area Community Manager for Coding Dojo, he is able to leverage technology and community to help aspiring developers as well as organizations reach their goals.</p>
-							<ul class="fh5co-social-icons">
-								<li><a href="#"><i class="icon-facebook"></i></a></li>
-								<li><a href="#"><i class="icon-twitter"></i></a></li>
-								<li><a href="#"><i class="icon-linkedin"></i></a></li>
-							</ul>
-						</div>
-					</div> -->
-					<div class="col-md-8 col-md-offset-2 animate-box" data-animate-effect="fadeIn">
-						<div class="fh5co-staff">
-							<img src="images/executives/elliot.jpg" alt="Free HTML5 Templates by gettemplates.co">
-							<h3><%= executive.content.name %></h3>
-							<strong class="role"><%= executive.role %></strong>
-							<p class="text-left"><%= executive.info> %></p>
-							<ul class="fh5co-social-icons">
-								<li>  link_to("Facebook", executive.facebook) %>  <i class="icon-facebook"></i>< </li>
-								<li>  link_to("Twitter",  executive.twitter) %> <i class="icon-twitter"> </i> </li>
-								<li>  link_to("LinkedIn",  executive.linkedin)  %>  <i class="icon-linkedin"> </i> </li>
-							</ul>
-						</div>
-					</div>
-					<!-- <div class="col-md-8 col-md-offset-2 animate-box" data-animate-effect="fadeIn">
-						<div class="fh5co-staff">
-							<img src="images/executives/kristi.jpg" alt="Free HTML5 Templates by gettemplates.co">
-							<h3>KRISTI PEARCE-PERCY</h3>
-							<strong class="role">Membership Chair</strong>
-							<p class="text-left">Kristi has a passion for Philanthropy and is an avid networker. Her work ethic is fueled by a sense of purpose and commitment to the Bay Area, where she was born and raised. For the last 12 years Kristi has worked for Cuschieri Horton Architects, a firm that specializes in Health Care Design.</p>
-							<ul class="fh5co-social-icons">
-								<li><a href="#"><i class="icon-facebook"></i></a></li>
-								<li><a href="#"><i class="icon-twitter"></i></a></li>
-								<li><a href="#"><i class="icon-linkedin"></i></a></li>
-							</ul>
-						</div>
-					</div> -->
-					<div class="col-md-8 col-md-offset-2 animate-box" data-animate-effect="fadeIn">
-						<div class="fh5co-staff">
-							<img src="images/executives/elliot.jpg" alt="Free HTML5 Templates by gettemplates.co">
-							<h3><%= executive.content.name %></h3>
-							<strong class="role"><%= executive.role %></strong>
-							<p class="text-left"><%= executive.info> %></p>
-							<ul class="fh5co-social-icons">
-								<li>  link_to("Facebook", executive.facebook) %>  <i class="icon-facebook"></i>< </li>
-								<li>  link_to("Twitter",  executive.twitter) %> <i class="icon-twitter"> </i> </li>
-								<li>  link_to("LinkedIn",  executive.linkedin)  %>  <i class="icon-linkedin"> </i> </li>
-							</ul>
-						</div>
-					</div>
-					<!-- <div class="col-md-8 col-md-offset-2 animate-box" data-animate-effect="fadeIn">
-						<div class="fh5co-staff">
-							<img src="images/executives/lisette.jpg" alt="Free HTML5 Templates by gettemplates.co">
-							<h3>LISETTE DAVILA</h3>
-							<strong class="role">Strategic Inititaives &amp; Events Chair </strong>
-							<p class="text-left">Lisette was born and raised in the bay area and received her bachelor’s degree in Public Health from The University of Arizona in 2008. Her passion to help others and desire to make a direct impact in her community gave her the drive to pursue and graduate with an associate’s degree in Nursing in 2016 from De Anza College. Through nursing and The Young Professional’s Council allows Lisette to continue to give back to the bay area community.</p>
-							<ul class="fh5co-social-icons">
-								<li><a href="#"><i class="icon-facebook"></i></a></li>
-								<li><a href="#"><i class="icon-twitter"></i></a></li>
-								<li><a href="#"><i class="icon-linkedin"></i></a></li>
-							</ul>
-						</div>
-					</div> -->
-					<div class="col-md-8 col-md-offset-2 animate-box" data-animate-effect="fadeIn">
-						<div class="fh5co-staff">
-							<img src="images/executives/elliot.jpg" alt="Free HTML5 Templates by gettemplates.co">
-							<h3><%= executive.content.name %></h3>
-							<strong class="role"><%= executive.role %></strong>
-							<p class="text-left"><%= executive.info> %></p>
-							<ul class="fh5co-social-icons">
-								<li>  link_to("Facebook", executive.facebook) %>  <i class="icon-facebook"></i>< </li>
-								<li>  link_to("Twitter",  executive.twitter) %> <i class="icon-twitter"> </i> </li>
-								<li>  link_to("LinkedIn",  executive.linkedin)  %>  <i class="icon-linkedin"> </i> </li>
-							</ul>
-						</div>
-					</div>
-					<!-- <div class="col-md-8 col-md-offset-2 animate-box" data-animate-effect="fadeIn">
-						<div class="fh5co-staff">
-							<img src="images/executives/tiffany.jpg" alt="Free HTML5 Templates by gettemplates.co">
-							<h3>TIFFANY WANG</h3>
-							<strong class="role">Strategic Inititaives &amp; Events Chair</strong>
-							<p class="text-left">Tiffany is a Bay Area native with a continued interest in volunteering and working towards promoting a healthy local community. She holds a bachelor’s degree in biology from Boston College and aspires to continue her education with a joint J.D. /M.P.H. degree.</p>
-							<ul class="fh5co-social-icons">
-								<li><a href="#"><i class="icon-facebook"></i></a></li>
-								<li><a href="#"><i class="icon-twitter"></i></a></li>
-								<li><a href="#"><i class="icon-linkedin"></i></a></li>
-							</ul>
-						</div>
-					</div> -->
-					<div class="col-md-8 col-md-offset-2 animate-box" data-animate-effect="fadeIn">
-						<div class="fh5co-staff">
-							<img src="images/executives/elliot.jpg" alt="Free HTML5 Templates by gettemplates.co">
-							<h3><%= executive.content.name %></h3>
-							<strong class="role"><%= executive.role %></strong>
-							<p class="text-left"><%= executive.info> %></p>
-							<ul class="fh5co-social-icons">
-								<li>  link_to("Facebook", executive.facebook) %>  <i class="icon-facebook"></i>< </li>
-								<li>  link_to("Twitter",  executive.twitter) %> <i class="icon-twitter"> </i> </li>
-								<li>  link_to("LinkedIn",  executive.linkedin)  %>  <i class="icon-linkedin"> </i> </li>
-							</ul>
-						</div>
-					</div>
-					<!-- <div class="col-md-8 col-md-offset-2 animate-box" data-animate-effect="fadeIn">
-						<div class="fh5co-staff">
-							<img src="images/executives/justin.jpg" alt="Free HTML5 Templates by gettemplates.co">
-							<h3>JUSTIN BUNGER</h3>
-							<strong class="role">Treasury Chair</strong>
-							<p class="text-left">Justin Bunger is currently an analyst with the Commercial Banking Division at Bridge Bank in San Jose. Growing up in the South Bay, Justin first developed an interest in healthcare and community outreach through years of dedicated community service. He looks to give back to his local community and create networking opportunities for other young professionals in the field, all while rallying around a good cause. Justin holds a Bachelor of Science in Kinesiology from Texas Christian University.</p>
-							<ul class="fh5co-social-icons">
-								<li><a href="#"><i class="icon-facebook"></i></a></li>
-								<li><a href="#"><i class="icon-twitter"></i></a></li>
-								<li><a href="#"><i class="icon-linkedin"></i></a></li>
-							</ul>
-						</div>
-					</div> -->
-					<div class="col-md-8 col-md-offset-2 animate-box" data-animate-effect="fadeIn">
-						<div class="fh5co-staff">
-							<img src="images/executives/elliot.jpg" alt="Free HTML5 Templates by gettemplates.co">
-							<h3><%= executive.content.name %></h3>
-							<strong class="role"><%= executive.role %></strong>
-							<p class="text-left"><%= executive.info> %></p>
-							<ul class="fh5co-social-icons">
-								<li>  link_to("Facebook", executive.facebook) %>  <i class="icon-facebook"></i>< </li>
-								<li>  link_to("Twitter",  executive.twitter) %> <i class="icon-twitter"> </i> </li>
-								<li>  link_to("LinkedIn",  executive.linkedin)  %>  <i class="icon-linkedin"> </i> </li>
-							</ul>
-						</div>
-					</div>
-					<!-- <div class="col-md-8 col-md-offset-2 animate-box" data-animate-effect="fadeIn">
-						<div class="fh5co-staff">
-							<img src="images/executives/jessica.jpg" alt="Free HTML5 Templates by gettemplates.co">
-							<h3>JESSICA AIRLINE</h3>
-							<strong class="role">Volunteer Chair</strong>
-							<p class="text-left">Jessica is a currently a Senior Public Affairs Representative at Kaiser Permanente, with over 9 years’ experience working in healthcare and community health outreach roles. Raised in Santa Cruz, Jessica has always had a passion for social justice and works to promote total health for local communities. She holds a Master’s in Public Administration from San Jose State University, and a Bachelor of Arts in Political Science from the University of California at Los Angeles.</p>
-							<ul class="fh5co-social-icons">
-								<li><a href="#"><i class="icon-facebook"></i></a></li>
-								<li><a href="#"><i class="icon-twitter"></i></a></li>
-								<li><a href="#"><i class="icon-linkedin"></i></a></li>
-							</ul>
-						</div>
-					</div> -->
+
+
 				</div>
 
 

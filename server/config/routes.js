@@ -77,7 +77,10 @@ module.exports = function(app){
   //the second parameter of navBar.generate represents whether the vistor is logged in or not. This will be implemented soon via session.
 	app.get("/", function(req, res){controllers.pageController.loadPage(req, res, "views/index.ejs", {navBar: navBar.generate("home", req)});});
 	app.get("/executives", function(req, res){
+    console.log("hello 1");
     Content.find({type:'executive'}, function(err, executives) {
+        console.log("hello 2")
+        console.log(executives);
         controllers.pageController.loadPage(req, res, "views/executives.ejs", {executives: executives, navBar: navBar.generate("executives", req)});
     })
   });
