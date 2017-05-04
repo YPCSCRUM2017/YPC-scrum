@@ -2,14 +2,14 @@ var path = require("path");
 var htmlPath = path.join(__dirname, "./../../server/");
 var crypto = require('crypto');
 
-var s3 = require('./../../server/config/s3functions.js');
-var AWS = require('aws-sdk');
+// var s3 = require('./../../server/config/s3functions.js');
+// var AWS = require('aws-sdk');
 
 
-var s3Config = require('./../config/s3-keys.js');
-AWS.config.update({ accessKeyId: s3Config.accessKey, secretAccessKey: s3Config.secretKey });
-AWS.config.update({region: s3Config.region});
-var s3sdk = new AWS.S3();
+// var s3Config = require('./../config/s3-keys.js');
+// AWS.config.update({ accessKeyId: s3Config.accessKey, secretAccessKey: s3Config.secretKey });
+// AWS.config.update({region: s3Config.region});
+// var s3sdk = new AWS.S3();
 
 module.exports = {
   index: function(req, res){
