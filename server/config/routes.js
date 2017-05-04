@@ -61,9 +61,9 @@ module.exports = function(app){
       controllers.contentController.delete(req, res)
     })
 
-    app.get('/s3_credentials', controllers.uploadController.credentials)
-    app.get('/upload', controllers.uploadController.index)
-    app.post('/upload/:key/destroy', controllers.uploadController.destroy)
+    // app.get('/s3_credentials', controllers.uploadController.credentials)
+    // app.get('/upload', controllers.uploadController.index)
+    // app.post('/upload/:key/destroy', controllers.uploadController.destroy)
 
 
     // user functions
