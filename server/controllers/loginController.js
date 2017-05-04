@@ -18,15 +18,21 @@ module.exports = {
   },
 
   loginAttempt: function(req, res) {
-    console.log(req.body);
+    console.log("req.body \n", req.body);
     var valid = true;
     var validationErrors = [];
     // check to see if user with this email exists:
 
+    if (req.body.email.length < 1 || req.body.pw1.length < 1) {
+      console.log("Error. Email or password too short. ");
+      res.redirect('/login');
+    };
     if(valid === true)
     {
       models.loginModel.loginAttempt(req, res, function(err, rows, fields){
+        console.log("this is err", err);
         console.log("this is rows", rows);
+
         var passwordCheck = bcrypt.compareSync(req.body.password, rows[0].password);
         console.log(passwordCheck);
         if(err)
