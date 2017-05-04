@@ -107,13 +107,13 @@
 				<form action="/loginattempt" method="POST">
 					<div class="row form-group">
 						<div class="col-md-12">
-							<label for="email">Email</label>
+							<label for="email">Email<span class="valid_error"><%= errors.email %></span></label>
 							<input name="email" type="text" id="email" class="form-control" placeholder="Email address">
 						</div>
 					</div>
 					<div class="row form-group">
 						<div class="col-md-12">
-							<label for="subject">Password</label>
+							<label for="subject">Password<span class="valid_error"><%= errors.password %></span></label>
 							<input name="password" type="password" id="password" class="form-control" placeholder="Password">
 						</div>
 					</div>

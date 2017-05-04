@@ -30,6 +30,7 @@ module.exports = {
     if(valid === true)
     {
       models.loginModel.loginAttempt(req, res, function(err, rows, fields){
+        console.log("this is req.body", req.body);
         console.log("this is err", err);
         console.log("this is rows", rows);
 
