@@ -165,6 +165,34 @@
 
 					<div class="row form-group">
 						<div class="col-md-12">
+							<label for="street">Street<span class="valid_error"><%= errors.street %></span></label>
+							<input name="street" type="text" id="address" class="form-control" placeholder="Address">
+						</div>
+					</div>
+
+					<div class="row form-group">
+						<div class="col-md-12">
+							<label for="city">City<span class="valid_error"><%= errors.city %></span></label>
+							<input name="city" type="text" id="city" class="form-control" placeholder="City">
+						</div>
+					</div>
+
+					<div class="row form-group">
+						<div class="col-md-12">
+							<label for="state">State<span class="valid_error"><%= errors.state %></span></label>
+							<input name="state" type="text" id="state" class="form-control" placeholder="State">
+						</div>
+					</div>
+
+					<div class="row form-group">
+						<div class="col-md-12">
+							<label for="zipcode">Zipcode<span class="valid_error"><%= errors.zipcode %></span></label>
+							<input name="zipcode" type="text" id="zipcode" class="form-control" placeholder="Zipcode">
+						</div>
+					</div>
+
+					<div class="row form-group">
+						<div class="col-md-12">
 							<label for="email">Email<span class="valid_error"><%= errors.email %></span></label>
 							<input name="email" type="text" id="email" class="form-control" placeholder="Email Address">
 						</div>
@@ -201,12 +229,12 @@
 							<br>
 							<label for="subject">1st Preference:<span class=""><%=  %></span></label>
 
-							<select class="form-control" id="select">
-								<option>Corporate Development &amp; Partnerships</option>
-								<option>Events</option>
-								<option>Membership</option>
-								<option>Treasury</option>
-								<option>Volunteer</option>
+							<select class="form-control" id="select" name="first_pref">
+								<option name="corporate_development">Corporate Development &amp; Partnerships</option>
+								<option name="events">Events</option>
+								<option name="membership">Membership</option>
+								<option name="treasury">Treasury</option>
+								<option name="volunteer">Volunteer</option>
 							</select>
 						</div>
 					</div>
@@ -214,24 +242,24 @@
 					<div class="row form-group">
 						<div class="col-md-12">
 							<label for="subject">2nd Preference:<span class=""><%=  %></span></label>
-							<select class="form-control" id="sel1">
-								<option>Corporate Development &amp; Partnerships</option>
-								<option>Events</option>
-								<option>Membership</option>
-								<option>Treasury</option>
-								<option>Volunteer</option>
+							<select class="form-control" id="sel1" name="sec_pref">
+								<option name="corporate_development">Corporate Development &amp; Partnerships</option>
+								<option name="events">Events</option>
+								<option name="membership">Membership</option>
+								<option name="treasury">Treasury</option>
+								<option name="volunteer">Volunteer</option>
 							</select>
 						</div>
 					</div>
 					<div class="row form-group">
 						<div class="col-md-12">
 							<label for="subject">3rd Preference:<span class=""><%=  %></span></label>
-							<select class="form-control" id="sel1">
-								<option>Corporate Development &amp; Partnerships</option>
-								<option>Events</option>
-								<option>Membership</option>
-								<option>Treasury</option>
-								<option>Volunteer</option>
+							<select class="form-control" id="sel1" name="third_pref">
+								<option name="corporate_development">Corporate Development &amp; Partnerships</option>
+								<option name="events">Events</option>
+								<option name="membership">Membership</option>
+								<option name="treasury">Treasury</option>
+								<option name="volunteer">Volunteer</option>
 							</select>
 						</div>
 					</div>

@@ -17,25 +17,27 @@ USE `YPCdb` ;
 -- -----------------------------------------------------
 -- Table `YPCdb`.`users`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `YPCdb`.`users` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `first_name` VARCHAR(255) NULL,
-  `last_name` VARCHAR(255) NULL,
-  `email` VARCHAR(255) NULL,
-  `password` VARCHAR(255) NULL,
-  `phone` VARCHAR(20) NULL,
-  `mobile` VARCHAR(20) NULL,
-  `position` VARCHAR(255) NULL,
-  `company` VARCHAR(255) NULL,
-  `street` VARCHAR(255) NULL,
-  `city` VARCHAR(255) NULL,
-  `state` VARCHAR(12) NULL,
-  `zipcode` VARCHAR(5) NULL,
-  `updated_at` DATETIME NULL,
-  `created_at` DATETIME NULL,
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(255) DEFAULT NULL,
+  `last_name` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `phone` varchar(20) DEFAULT NULL,
+  `position` varchar(255) DEFAULT NULL,
+  `company` varchar(255) DEFAULT NULL,
+  `street` varchar(255) DEFAULT NULL,
+  `city` varchar(255) DEFAULT NULL,
+  `state` varchar(12) DEFAULT NULL,
+  `zipcode` varchar(5) DEFAULT NULL,
+  `1st_pref` varchar(45) DEFAULT NULL,
+  `2nd_pref` varchar(45) DEFAULT NULL,
+  `3rd_pref` varchar(45) DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE INDEX `email_UNIQUE` (`email` ASC))
-ENGINE = InnoDB;
+  UNIQUE KEY `email_UNIQUE` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 
 -- -----------------------------------------------------

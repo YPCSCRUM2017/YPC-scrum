@@ -9,6 +9,8 @@ var crypto = require("crypto");
 var app = express();
 var port = 5000;
 
+require('./server/config/mongoose.js');
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 

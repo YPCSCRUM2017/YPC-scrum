@@ -8,12 +8,17 @@ var htmlPath = path.join(__dirname, "./../../client/");
 var requireFolder = require("./../config/req_folder.js");
 var models = requireFolder("models");
 var session = require("express-session");
+var mongoose = require("mongoose");
+var User = mongoose.model("User");
+
+
+
 
 module.exports = {
 
 	//sends the registration page
 	regPage: function(req, res, data){
-		console.log(req.session.errors );
+		// console.log(req.session.errors );
 		if (req.session.errors === undefined){
 			req.session.errors = {};
 		}
@@ -22,7 +27,7 @@ module.exports = {
 
 	//user tries to register
 	newUser: function(req, res){
-		console.log(req.body);
+		// console.log(req.body);
 		var valid = true;
 		var validationErrors = {};
 		req.session.errors = {};
@@ -73,12 +78,28 @@ module.exports = {
 		}
 
 		if(valid === true){
-			models.registrationModel.newUser(req, res, function(err, rows, fields){
-				for(key in err){
-					console.log(key, ":", err[key]);
-					console.log("--");
+			// models.registrationModel.newUser(req, res, function(err, rows, fields){
+			// 	for(key in err){
+			// 		console.log(key, ":", err[key]);
+			// 		// console.log("--");
+			// 	}
+
+			// hashing password
+			var bcrypt = require("bcryptjs");
+			var salt = bcrypt.genSaltSync(10);
+			var hashedPW = bcrypt.hashSync(req.body.pw1, salt);
+
+			var user = new User({first_name:req.body.first_name, last_name:req.body.last_name, email:req.body.email, password: hashedPW, phone:req.body.phone, company: req.body.company, position: req.body.position, street: req.body.street, city: req.body.city,
+			 	zipcode: req.body.zipcode, first_pref: req.body.first_pref, sec_pref: req.body.sec_pref, third_pref: req.body.third_pref })
+			user.save(function(err){
+				if(err){
+					console.log("something when wrong in saving the new User")
+				}else{
+					console.log("successfully added a user")
+					res.redirect('/');
 				}
 
+			})
 				if(err != undefined && err.errno !== undefined)
 				{
 					switch(err.errno)
@@ -90,7 +111,7 @@ module.exports = {
 					res.redirect('/registration');
 				}
 				else{
-					console.log(rows, "rows from controller");
+					// console.log(rows, "rows from controller");
 					req.session.data = {};
 					// req.session.data.first_name = "test name 1";
 					req.session.data.userid = rows.insertId;
@@ -100,11 +121,11 @@ module.exports = {
 					})
 				}
 
-			});
+
 		}
 		else
 		{
-			console.log("Validation failed.");
+			// console.log("Validation failed.");
 			req.session.errors = validationErrors;
 			res.redirect('/registration');
 		}
