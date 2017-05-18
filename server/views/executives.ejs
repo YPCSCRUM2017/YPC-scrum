@@ -42,6 +42,20 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 	<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+	<script>
+			function makeEditable(div){
+			    div.style.border = "1px solid #000";
+			    div.style.padding = "20px";
+			    div.contentEditable = true;
+			}
+			function makeReadOnly(div){
+			    div.style.border = "none";
+			    div.style.padding = "0px";
+			    div.contentEditable = false;
+			    alert("Run Ajax POST request here to save the div.innerHTML \
+			    or div.textContent to the database.");
+			}
+	</script>
 </head>
 <body>
 
@@ -83,7 +97,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-7 text-left">
-						<div class="display-t">
+						<div ondblclick="makeEditable(this)" onblur="makeReadOnly(this)" class="display-t">
 							<div class="display-tc animate-box" data-animate-effect="fadeInUp">
 								<h1 class="mb30">Executives</h1>
 							</div>
@@ -96,7 +110,7 @@
 		<div id="fh5co-team">
 			<div class="container">
 				<div class="row animate-box row-pb-md">
-					<div class="col-md-8 col-md-offset-2 text-left fh5co-heading">
+					<div ondblclick="makeEditable(this)" onblur="makeReadOnly(this)" class="col-md-8 col-md-offset-2 text-left fh5co-heading">
 						<span>Meet Our Leaders</span>
 						<h2>EXECUTIVE BOARD</h2>
 						<p>The YPC is composed of emerging leaders in the business community who are dedicated to promoting the level of health care in the County of Santa Clara and addressing the current health-related issues affecting the community. These young leaders enhance the positive impact of the VMC Foundation while advancing their personal and professional goals and expanding their professional networks.</p>
@@ -104,7 +118,7 @@
 				</div>
 
 
-				<div class="row">
+				<div ondblclick="makeEditable(this)" onblur="makeReadOnly(this)" class="row">
 					<% for(executive of executives)  { %>
 						<div class="col-md-8 col-md-offset-2 animate-box" data-animate-effect="fadeIn">
 							<h1> <%= executive.content.role %> </h1>
@@ -127,7 +141,7 @@
 			<div id="fh5co-testimonial" class="fh5co-bg-section">
 				<div class="container">
 					<div class="row animate-box row-pb-md">
-						<div class="col-md-8 col-md-offset-2 text-left fh5co-heading">
+						<div ondblclick="makeEditable(this)" onblur="makeReadOnly(this)" class="col-md-8 col-md-offset-2 text-left fh5co-heading">
 							<span>Connect with like-minded professionals</span>
 							<h2>HAPPY MEMBERS</h2>
 							<p>Stay informed with YPC and business partnership news.</p>
@@ -135,13 +149,13 @@
 					</div>
 					<div class="row">
 						<div class="col-md-6 animate-box">
-							<div class="testimonial">
+							<div ondblclick="makeEditable(this)" onblur="makeReadOnly(this)" class="testimonial">
 								<blockquote>
 									<p>&ldquo;Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.&rdquo;</p>
 									<p class="author"> <img src="images/person1.jpg" alt="Free HTML5 Bootstrap Template by gettemplates.co"> <cite>&mdash; Mike Adam</cite></p>
 								</blockquote>
 							</div>
-							<div class="testimonial fh5co-selected">
+							<div ondblclick="makeEditable(this)" onblur="makeReadOnly(this)" class="testimonial fh5co-selected">
 								<blockquote>
 									<p>&ldquo;Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius. Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.&rdquo;</p>
 									<p class="author"><img src="images/person1.jpg" alt="Free HTML5 Bootstrap Template by gettemplates.co"> <cite>&mdash; Eric Miller</cite></p>
@@ -149,13 +163,13 @@
 							</div>
 						</div>
 						<div class="col-md-6 animate-box">
-							<div class="testimonial fh5co-selected">
+							<div ondblclick="makeEditable(this)" onblur="makeReadOnly(this)" class="testimonial fh5co-selected">
 								<blockquote>
 									<p>&ldquo;Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius. Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.&rdquo;</p>
 									<p class="author"><img src="images/person1.jpg" alt="Free HTML5 Bootstrap Template by gettemplates.co"> <cite>&mdash; Eric Miller</cite></p>
 								</blockquote>
 							</div>
-							<div class="testimonial">
+							<div ondblclick="makeEditable(this)" onblur="makeReadOnly(this)" class="testimonial">
 								<blockquote>
 									<p>&ldquo;Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.&rdquo;</p>
 									<p class="author"><img src="images/person1.jpg" alt="Free HTML5 Bootstrap Template by gettemplates.co"> <cite>&mdash; Mike Adam</cite></p>
@@ -169,7 +183,7 @@
 			<div id="fh5co-started">
 				<div class="container">
 					<div class="row animate-box">
-						<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+						<div ondblclick="makeEditable(this)" onblur="makeReadOnly(this)" class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 							<span>Let's work together</span>
 							<h2>BECOME A MEMBER</h2>
 							<p>The focus of the Young Professional Council is to raise funds, volunteer, promote community awareness, and build partnerships with the local business community.</p>

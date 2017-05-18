@@ -44,7 +44,23 @@
 	<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 	<script type="text/javascript">
 		Stripe.setPublishableKey('');
+
+		//Editable functions >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			function makeEditable(div){
+			    div.style.border = "1px solid #000";
+			    div.style.padding = "20px";
+			    div.contentEditable = true;
+			}
+			function makeReadOnly(div){
+			    div.style.border = "none";
+			    div.style.padding = "0px";
+			    div.contentEditable = false;
+			    alert("Run Ajax POST request here to save the div.innerHTML \
+			    or div.textContent to the database.");
+			}
 	</script>
+
+
 	</head>
 	<style>
 		.valid_error{
@@ -92,7 +108,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-7 text-left">
-					<div class="display-t">
+					<div ondblclick="makeEditable(this)" onblur="makeReadOnly(this)" class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeInUp">
 							<h1 class="mb30">Donate</h1>
 						</div>
@@ -102,18 +118,18 @@
 		</div>
 	</header>
 <!-- //Do not give names to the payment details form elements! -->
-	<div id="fh5co-project">
+	<div ondblclick="makeEditable(this)" onblur="makeReadOnly(this)" id="fh5co-project">
 		<div class="container">
 			<div class="row row-pb-md">
 				<div class="col-md-8 col-md-offset-2 text-left animate-box" data-animate-effect="fadeInUp">
-					<div class="fh5co-heading">
+					<div ondblclick="makeEditable(this)" onblur="makeReadOnly(this)" class="fh5co-heading">
 						<span>Support our cause</span>
 						<h2>OUR CHARITY</h2>
 						<p>The VMC Foundation is an independent, nonprofit organization (Federal Tax ID 77-0187890) that raises private donations from the community on behalf of Santa Clara Valley Medical Center (VMC) and the entire Santa Clara Valley Health &amp; Hospital System. The Foundation seeks these funds to purchase equipment and fund programs that improve the quality of care and promote access to medical treatment for all residents of Santa Clara County.</p>
 						<p>The Foundation maintains strict financial controls to ensure funds are used only for purposes as stipulated by the donor.   Donors can restrict funds for a special use, contribute to an already existing fund, or work with Foundation staff to identify the best use of their contribution.</p>
 						<p>VMC is the largest and busiest hospital in the Silicon Valley region, and the only one that provides care to all, regardless of ability to pay. It is owned and operated by the County of Santa Clara.</p>
 					</div>
-					<div class="form-group">
+					<div ondblclick="makeEditable(this)" onblur="makeReadOnly(this)" class="form-group">
 						<a href="http://vmcfoundation.org/vmc/">Learn more about the VMC Foundation...</a>
 					</div>
 					<br>
@@ -258,7 +274,7 @@
 	</div>
 
 
-	<div id="fh5co-started">
+	<div ondblclick="makeEditable(this)" onblur="makeReadOnly(this)" id="fh5co-started">
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">

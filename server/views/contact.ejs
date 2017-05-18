@@ -42,6 +42,20 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 	<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+	<script>
+			function makeEditable(div){
+			    div.style.border = "1px solid #000";
+			    div.style.padding = "20px";
+			    div.contentEditable = true;
+			}
+			function makeReadOnly(div){
+			    div.style.border = "none";
+			    div.style.padding = "0px";
+			    div.contentEditable = false;
+			    alert("Run Ajax POST request here to save the div.innerHTML \
+			    or div.textContent to the database.");
+			}
+	</script>
 	</head>
 	<body>
 
@@ -83,7 +97,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-7 text-left">
-					<div class="display-t">
+					<div ondblclick="makeEditable(this)" onblur="makeReadOnly(this)" class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeInUp">
 							<h1 class="mb30">Contact Us</h1>
 						</div>
@@ -96,7 +110,7 @@
 	<div id="fh5co-contact">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-5 col-md-push-1 animate-box">
+				<div ondblclick="makeEditable(this)" onblur="makeReadOnly(this)" class="col-md-5 col-md-push-1 animate-box">
 					<div class="fh5co-contact-info">
 						<h3>Contact Information</h3>
 						<ul>
@@ -149,7 +163,7 @@
 	<div id="fh5co-started">
 		<div class="container">
 			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+				<div ondblclick="makeEditable(this)" onblur="makeReadOnly(this)" class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<span>Let's work together</span>
 					<h2>BECOME A MEMBER</h2>
 					<p>The focus of the Young Professional Council is to raise funds, volunteer, promote community awareness, and build partnerships with the local business community.</p>
