@@ -100,26 +100,26 @@ module.exports = {
 				}
 
 			})
-				if(err != undefined && err.errno !== undefined)
-				{
-					switch(err.errno)
-					{
-						case 1062: validationErrors.email = "Email address already taken.";
-						break;
-					}
-					req.session.errors = validationErrors;
-					res.redirect('/registration');
-				}
-				else{
-					// console.log(rows, "rows from controller");
-					req.session.data = {};
-					// req.session.data.first_name = "test name 1";
-					req.session.data.userid = rows.insertId;
-					models.registrationModel.get1User(req, res, rows.insertId, function(errors, rows2, fields){
-						req.session.data.first_name = rows2[0].first_name;
-						res.redirect('/');
-					})
-				}
+				// if(err != undefined && err.errno !== undefined)
+				// {
+				// 	switch(err.errno)
+				// 	{
+				// 		case 1062: validationErrors.email = "Email address already taken.";
+				// 		break;
+				// 	}
+				// 	req.session.errors = validationErrors;
+				// 	res.redirect('/registration');
+				// }
+				// else{
+				// 	// console.log(rows, "rows from controller");
+				// 	req.session.data = {};
+				// 	// req.session.data.first_name = "test name 1";
+				// 	req.session.data.userid = rows.insertId;
+				// 	models.registrationModel.get1User(req, res, rows.insertId, function(errors, rows2, fields){
+				// 		req.session.data.first_name = rows2[0].first_name;
+				// 		res.redirect('/');
+				// 	})
+				// }
 
 
 		}
