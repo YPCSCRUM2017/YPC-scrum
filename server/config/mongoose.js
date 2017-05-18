@@ -14,6 +14,7 @@ var reg           = new RegExp( ".js$", "i" )
 var dbURI         = 'mongodb://localhost/ypc_users';
 
 mongoose.Promise = global.Promise;
+mongoose.connect( dbURI );
 mongoose.createConnection( dbURI );
 /*
 *  CONNECTION EVENTS
