@@ -13,7 +13,8 @@ var reg           = new RegExp( ".js$", "i" )
 
 var dbURI         = 'mongodb://localhost/ypc_users';
 
-mongoose.connect( dbURI );
+mongoose.Promise = global.Promise;
+mongoose.createConnection( dbURI );
 /*
 *  CONNECTION EVENTS
 *  When successfully connected
